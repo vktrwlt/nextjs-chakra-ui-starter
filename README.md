@@ -57,4 +57,6 @@ Resource: [Atomic Design](https://atomicdesign.bradfrost.com/)
 `PascalCase` is used when naming files and components
 Prefix `Chakra` into the components name when extending styles and props imported from the Chakra-ui library
 
+## Coding Standards
 
+Javascript coding standards are enforced using eslint and alias are used when importing files

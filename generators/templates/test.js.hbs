@@ -1,0 +1,10 @@
+import { render, screen } from 'utils/test-utils'
+
+import {{pascalCase name}} from '~/components/{{componentType}}/{{pascalCase name}}/{{pascalCase name}}'
+
+describe('<{{pascalCase name}} />', () => {
+  const { container } = render(<{{pascalCase name}}/>)
+  it('should render without crashing', () => {
+    expect(container).toBeInTheDocument()
+  })
+})

@@ -1,6 +1,5 @@
 import { ChakraProvider, ColorModeProvider } from '@chakra-ui/react'
-
-import theme from '../theme/index'
+import theme from '../theme'
 
 /**
  * Determines if we are running on server or in client.

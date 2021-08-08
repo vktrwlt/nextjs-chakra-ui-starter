@@ -14,7 +14,7 @@
     "test:update": "npm test -- -u",
     "test:ci": "jest --ci",
     "storybook": "start-storybook -s ./public -p 9001",
-    "lint": "eslint \"./**/*.{js,jsx}\" --fix",
+    "lint": "next lint",
     "format": "prettier --write \"./**/*.{js,jsx}\"",
     "generate": "npx plop --plopfile generators/plopfile.js"
   },
@@ -47,6 +47,7 @@
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.2",
     "eslint": "^7.32.0",
+    "eslint-config-next": "^11.0.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "^2.23.4",

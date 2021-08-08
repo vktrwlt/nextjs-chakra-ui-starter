@@ -23,12 +23,7 @@ if (process.env.NODE_ENV !== 'production' && !getIsServerRendered()) {
 function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider resetCSS theme={theme}>
-      <ColorModeProvider
-        options={{
-          useSystemColorMode: true,
-        }}>
-        <Component {...pageProps} />
-      </ColorModeProvider>
+      <Component {...pageProps} />
     </ChakraProvider>
   )
 }

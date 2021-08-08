@@ -59,4 +59,5 @@ Prefix `Chakra` into the components name when extending styles and props importe
 
 ## Coding Standards
 
-Javascript coding standards are enforced using eslint and alias are used when importing files
+Javascript coding standards are enforced using eslint.
+Eslint enforces alias imports and VSCode should automagically do it for you.

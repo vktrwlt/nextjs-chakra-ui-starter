@@ -1,9 +1,9 @@
-import {{pascalCase name}} from '~/components/{{componentType}}/{{pascalCase name}}/{{pascalCase name}}'
-import { render } from '~/utils/test-utils'
+import {{pascalCase name}} from '~/components/{{componentType}}/{{pascalCase name}}/{{pascalCase name}}';
+import { render } from '~/utils/test-utils';
 
 describe('<{{pascalCase name}} />', () => {
-  const { container } = render(<{{pascalCase name}}/>)
+  const { container } = render(<{{pascalCase name}}/>);
   it('should render without crashing', () => {
-    expect(container).toBeInTheDocument()
-  })
-})
+    expect(container).toBeInTheDocument();
+  });
+});

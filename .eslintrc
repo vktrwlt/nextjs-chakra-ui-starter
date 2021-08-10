@@ -57,7 +57,7 @@
     "react-hooks/exhaustive-deps": "error",
     "react/jsx-props-no-spreading": "off",
     "object-curly-newline": "off",
-    "semi": ["error", "never"],
+    "semi": ["error", "always"],
     "import/no-absolute-path": [2],
     "import/no-unresolved": [2],
     "import/no-useless-path-segments": [

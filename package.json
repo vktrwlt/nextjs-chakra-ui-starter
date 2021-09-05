@@ -7,16 +7,32 @@
     "build-storybook": "build-storybook",
     "build:export": "next build && next export",
     "dev": "next dev",
+    "format": "prettier --write \"./**/*.{js,jsx}\"",
+    "lint": "eslint \"./**/*.{js,jsx}\" --fix",
+    "make": "npx plop --plopfile generators/plopfile.js",
+    "sort": "npx sort-npm-scripts && npx sort-package-json",
     "start": "next",
+    "storybook": "start-storybook -s ./public -p 9001",
     "test": "jest",
-    "test:watch": "jest --watch",
+    "test:ci": "jest --ci",
     "test:coverage": "jest --coverage",
     "test:update": "npm test -- -u",
-    "test:ci": "jest --ci",
-    "storybook": "start-storybook -s ./public -p 9001",
-    "lint": "eslint \"./**/*.{js,jsx}\" --fix",
-    "format": "prettier --write \"./**/*.{js,jsx}\"",
-    "generate": "npx plop --plopfile generators/plopfile.js"
+    "test:watch": "jest --watch"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run test"
+    }
+  },
+  "lint-staged": {
+    "*.{js}": [
+      "eslint"
+    ],
+    "*.{js,css,json,md,mdx}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "dependencies": {
     "@chakra-ui/icons": "^1.0.14",
@@ -50,29 +66,14 @@
     "eslint": "^7.32.0",
     "eslint-config-next": "^11.1.0",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^3.4.1",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-prettier": "^3.4.1",
     "husky": "^4.3.6",
     "jest": "^27.0.6",
     "lint-staged": "^10.5.3",
     "plop": "^2.7.4",
     "prettier": "^2.3.2",
     "prop-types": "^15.7.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "npm run test"
-    }
-  },
-  "lint-staged": {
-    "*.{js}": [
-      "eslint"
-    ],
-    "*.{js,css,json,md,mdx}": [
-      "prettier --write",
-      "git add"
-    ]
   }
 }

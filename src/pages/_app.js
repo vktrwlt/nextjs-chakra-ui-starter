@@ -1,5 +1,5 @@
+import theme from '@/theme';
 import { ChakraProvider } from '@chakra-ui/react';
-import theme from '../theme';
 
 /**
  * Determines if we are running on server or in client.

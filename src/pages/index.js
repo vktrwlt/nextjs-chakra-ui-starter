@@ -1,5 +1,5 @@
-import { DarkModeSwitch } from '@/components/_atoms/DarkModeSwitch/DarkModeSwitch';
-import Container from '@/components/_templates/Container/Container';
+import Container from '@/components/Container/Container';
+import { DarkModeSwitch } from '@/components/DarkModeSwitch/DarkModeSwitch';
 import { Flex, Heading } from '@chakra-ui/react';
 
 const Index = () => (

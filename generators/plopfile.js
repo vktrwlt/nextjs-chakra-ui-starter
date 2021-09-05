@@ -27,6 +27,11 @@ module.exports = plop => {
         },
         {
           type: 'add',
+          path: '../src/components/{{pascalCase name}}/index.js',
+          templateFile: 'templates/ComponentIndex.js.hbs',
+        },
+        {
+          type: 'add',
           path: '../src/components/{{pascalCase name}}/{{pascalCase name}}.test.jsx',
           templateFile: 'templates/test.js.hbs',
         },

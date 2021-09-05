@@ -1,42 +1,26 @@
 {
   "parser": "babel-eslint",
+  "plugins": [],
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:jsx-a11y/recommended",
-    "prettier"
+    "next",
+    "next/core-web-vitals",
+    "prettier",
+    "plugin:prettier/recommended"
   ],
-  "plugins": ["prettier", "react-hooks", "import", "jsx-a11y"],
   "env": {
     "browser": true,
     "commonjs": true,
     "es6": true,
     "node": true
   },
-  "parserOptions": {
-    "ecmaVersion": 2018,
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
-    }
-  },
-  "settings": {
-    "react": {
-      "version": "detect"
-    },
-    "import/resolver": {
-      "alias": {
-        "map": [["@/*", "./src/"]]
-      }
-    }
-  },
   "overrides": [
     {
-      "files": ["**/*.jest.js", "**/*.test.js"],
+      "files": ["**/*.test.js", "**/*.test.jsx"],
       "env": {
-        "jest": true // now **/*.jest.js files' env has both es6 *and* jest
+        "jest": true
       },
-      "rules": {}
+      "rules": { "no-unused-vars": 0 }
     },
     {
       "files": ["src/pages/_*.js"],
@@ -45,27 +29,21 @@
       }
     },
     {
-      "files": ["**/*.stories.js"],
-      "rules": {}
+      "files": ["**/*.stories.js", "**/*.stories.jsx"],
+      "rules": {
+        "import/no-anonymous-default-export": "off"
+      }
     }
   ],
   "rules": {
-    "react/react-in-jsx-scope": "off", // Next.js doesn't require react to be in scope
-    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
-    "react/jsx-filename-extension": "off",
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "error",
-    "react/jsx-props-no-spreading": "off",
-    "object-curly-newline": "off",
-    "semi": ["error", "always"],
-    "import/no-absolute-path": [2],
-    "import/no-unresolved": [2],
-    "import/no-useless-path-segments": [
+    "no-unused-vars": 0,
+    "prettier/prettier": [
       "error",
       {
-        "noUselessIndex": true
+        "singleQuote": true
       }
     ],
+    "semi": ["error", "always"],
     "import/newline-after-import": ["warn", { "count": 1 }],
     "import/order": [
       "warn",
@@ -90,18 +68,6 @@
           "caseInsensitive": true
         }
       }
-    ],
-    // next-js rules
-    "jsx-a11y/anchor-is-valid": [
-      "error",
-      {
-        "components": ["Link"],
-        "specialLink": ["hrefLeft", "hrefRight"],
-        "aspects": ["invalidHref", "preferButton"]
-      }
     ]
-  },
-
-  // next-js rule
-  "globals": { "React": "writable" }
+  }
 }

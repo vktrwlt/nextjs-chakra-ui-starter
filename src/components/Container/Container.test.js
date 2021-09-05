@@ -1,4 +1,4 @@
-import Container from '@/components/_templates/Container/Container';
+import Container from '@/components/Container/Container';
 import { render, screen } from '@/utils/test-utils';
 
 describe('<Container/ >', () => {

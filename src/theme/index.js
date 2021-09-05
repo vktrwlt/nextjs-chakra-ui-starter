@@ -1,12 +1,12 @@
-import { extendTheme } from '@chakra-ui/react'
+import { extendTheme } from '@chakra-ui/react';
 // Global style overrides
-import Button from './components/button'
-import colors from './foundations/colors'
-import config from './foundations/config'
+import Button from './components/button';
+import colors from './foundations/colors';
+import config from './foundations/config';
 // Foundational style overrides
-import fonts from './foundations/fonts'
-import shadows from './foundations/shadows'
-import styles from './styles'
+import fonts from './foundations/fonts';
+import shadows from './foundations/shadows';
+import styles from './styles';
 
 // Component style overrides
 
@@ -38,6 +38,6 @@ const customTheme = {
       viewBox: '0 0 3000 3163',
     },
   },
-}
+};
 
-export default extendTheme(customTheme)
+export default extendTheme(customTheme);

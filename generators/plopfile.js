@@ -9,27 +9,51 @@ module.exports = plop => {
       },
       {
         type: 'list',
-        name: 'componentType',
-        message: 'Type of component',
-        choices: ['_atoms', '_molecules', '_organisms', '_pages', '_templates'],
+        name: 'componentTemplate',
+        message: 'Component Template',
+        default: 'none',
+        choices: [
+          { name: 'With Props', value: 'props' },
+          { name: 'No Props', value: 'styled' },
+        ],
       },
     ],
-    actions: [
-      {
-        type: 'add',
-        path: '../src/components/{{componentType}}/{{pascalCase name}}/{{pascalCase name}}.js',
-        templateFile: 'templates/Component.js.hbs',
-      },
-      {
-        type: 'add',
-        path: '../src/components/{{componentType}}/{{pascalCase name}}/{{pascalCase name}}.stories.js',
-        templateFile: 'templates/stories.js.hbs',
-      },
-      {
-        type: 'add',
-        path: '../src/components/{{componentType}}/{{pascalCase name}}/{{pascalCase name}}.test.js',
-        templateFile: 'templates/test.js.hbs',
-      },
-    ],
-  })
-}
+    actions: data => {
+      let actions = [
+        {
+          type: 'add',
+          path: '../src/components/{{pascalCase name}}/{{pascalCase name}}.stories.jsx',
+          templateFile: 'templates/stories.js.hbs',
+        },
+        {
+          type: 'add',
+          path: '../src/components/{{pascalCase name}}/{{pascalCase name}}.test.jsx',
+          templateFile: 'templates/test.js.hbs',
+        },
+      ];
+
+      if (data.componentTemplate === 'props') {
+        actions = actions.concat([
+          {
+            type: 'add',
+            path: '../src/components/{{pascalCase name}}/{{pascalCase name}}.jsx',
+            templateFile: 'templates/ComponentWithProps.js.hbs',
+          },
+        ]);
+      }
+
+      if (data.componentTemplate === 'noProps') {
+        actions = actions.concat([
+          {
+            type: 'add',
+            path: '../src/components/{{pascalCase name}}/{{pascalCase name}}.jsx',
+            templateFile: 'templates/Component.js.hbs',
+          },
+        ]);
+      }
+
+      // Return the array of actions to take.
+      return actions;
+    },
+  });
+};

@@ -1,6 +1,6 @@
-import { Flex, Heading } from '@chakra-ui/react'
-import { DarkModeSwitch } from '~/components/_atoms/DarkModeSwitch/DarkModeSwitch'
-import Container from '~/components/_templates/Container/Container'
+import { DarkModeSwitch } from '@/components/_atoms/DarkModeSwitch/DarkModeSwitch';
+import Container from '@/components/_templates/Container/Container';
+import { Flex, Heading } from '@chakra-ui/react';
 
 const Index = () => (
   <Container height='100vh'>
@@ -15,6 +15,6 @@ const Index = () => (
 
     <DarkModeSwitch />
   </Container>
-)
+);
 
-export default Index
+export default Index;

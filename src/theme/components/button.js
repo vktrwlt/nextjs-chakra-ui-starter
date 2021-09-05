@@ -1,7 +1,7 @@
 const Button = {
   baseStyle: {
-    fontWeight: 'bold'
-  }
-}
+    fontWeight: 'bold',
+  },
+};
 
-export default Button
+export default Button;

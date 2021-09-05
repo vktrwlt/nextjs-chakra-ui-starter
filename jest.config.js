@@ -5,10 +5,10 @@ module.exports = {
   snapshotSerializers: ['@emotion/jest/serializer'],
   moduleDirectories: ['node_modules', '<rootDir>/src'],
   moduleNameMapper: {
-    '^~/components(.*)$': '<rootDir>/src/components$1',
-    '^~/utils(.*)$': '<rootDir>/src/utils$1',
+    '^@/components(.*)$': '<rootDir>/src/components$1',
+    '^@/utils(.*)$': '<rootDir>/src/utils$1',
   },
   // coverage
   collectCoverageFrom: ['<rootDir>/src/**/*.{js,jsx}'],
   transformIgnorePatterns: ['<rootDir>/node_modules/'],
-}
+};

@@ -1,7 +1,7 @@
 const styles = {
   global: {
-    'html, body': {}
-  }
-}
+    'html, body': {},
+  },
+};
 
-export default styles
+export default styles;

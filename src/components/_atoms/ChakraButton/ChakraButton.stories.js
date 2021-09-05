@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChakraButton } from '~/components/_atoms/ChakraButton/ChakraButton';
+import { ChakraButton } from '@/components/_atoms/ChakraButton/ChakraButton';
 
 export default {
   title: '_atoms/ChakraButton',

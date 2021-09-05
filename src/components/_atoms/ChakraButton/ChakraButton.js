@@ -1,13 +1,13 @@
-import { Button } from '@chakra-ui/react'
-import PropTypes from 'prop-types'
+import { Button } from '@chakra-ui/react';
+import PropTypes from 'prop-types';
 
 export const ChakraButton = ({ colorScheme, size, label }) => {
   return (
     <Button colorScheme={colorScheme} size={size}>
       {label}
     </Button>
-  )
-}
+  );
+};
 
 ChakraButton.propTypes = {
   /**
@@ -41,10 +41,10 @@ ChakraButton.propTypes = {
    * Button contents
    */
   label: PropTypes.string.isRequired,
-}
+};
 
 ChakraButton.defaultProps = {
   colorScheme: 'teal',
   size: 'md',
   label: 'Button',
-}
+};

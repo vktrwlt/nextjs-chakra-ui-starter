@@ -1,12 +1,12 @@
-import { ChakraProvider, ColorModeProvider } from '@chakra-ui/react'
-import theme from '../theme'
+import { ChakraProvider } from '@chakra-ui/react';
+import theme from '../theme';
 
 /**
  * Determines if we are running on server or in client.
  * @return {boolean} true if running on server
  */
 function getIsServerRendered() {
-  return typeof window === 'undefined'
+  return typeof window === 'undefined';
 }
 
 /**
@@ -14,10 +14,10 @@ function getIsServerRendered() {
  * @see https://github.com/dequelabs/react-axe
  */
 if (process.env.NODE_ENV !== 'production' && !getIsServerRendered()) {
-  const React = require('react')
-  const ReactDOM = require('react-dom')
-  const axe = require('@axe-core/react')
-  axe(React, ReactDOM, 1000)
+  const React = require('react');
+  const ReactDOM = require('react-dom');
+  const axe = require('@axe-core/react');
+  axe(React, ReactDOM, 1000);
 }
 
 function MyApp({ Component, pageProps }) {
@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps }) {
     <ChakraProvider resetCSS theme={theme}>
       <Component {...pageProps} />
     </ChakraProvider>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;

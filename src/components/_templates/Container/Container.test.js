@@ -1,5 +1,5 @@
-import Container from '~/components/_templates/Container/Container'
-import { render, screen } from '~/utils/test-utils'
+import Container from '@/components/_templates/Container/Container';
+import { render, screen } from '@/utils/test-utils';
 
 describe('<Container/ >', () => {
   it('should render with children', () => {
@@ -7,8 +7,8 @@ describe('<Container/ >', () => {
       <Container>
         <div data-testid='Mock Children' />
       </Container>
-    )
+    );
 
-    expect(screen.getByTestId('Mock Children')).toBeInTheDocument()
-  })
-})
+    expect(screen.getByTestId('Mock Children')).toBeInTheDocument();
+  });
+});

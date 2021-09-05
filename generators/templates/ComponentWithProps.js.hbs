@@ -1,0 +1,18 @@
+import PropTypes from 'prop-types';
+import { Box } from '@chakra-ui/react';
+
+const {{pascalCase name}} = () => {
+  const { children } = props;
+
+  return <Box>{children}</Box>;
+};
+
+{{pascalCase name}}.defaultProps = {
+  children: null
+};
+
+{{pascalCase name}}.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default {{pascalCase name}};

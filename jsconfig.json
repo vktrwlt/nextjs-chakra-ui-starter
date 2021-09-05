@@ -3,8 +3,15 @@
     "baseUrl": ".",
     "module": "es2015",
     "paths": {
-      "~/*": ["./src/*"]
+      "@/components/*": ["src/components/*"],
+      "@/pages/*": ["src/pages/*"],
+      "@/templates/*": ["src/templates/*"],
+      "@/theme/*": ["src/theme/*"],
+      "@/utils/*": ["src/utils/*"],
+      "@/assets/*": ["src/assets/*"],
+      "@/hooks/*": ["src/hooks/*"],
+      "@/*": ["src/*"]
     }
   },
-  "exclude": ["node_modules", "cypress", "coverage", ".github", "test"]
+  "exclude": ["node_modules", "coverage", ".github", "test"]
 }
